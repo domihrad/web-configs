@@ -27,11 +27,11 @@ function styles()
 
 function scripts()
 {
-    return src('src/scripts/js/*.js')
-        .pipe(concat('main.js'))
-        .pipe(rename({suffix: '.min'}))
+    return src("src/scripts/js/*.js")
+        .pipe(concat("main.js"))
+        .pipe(rename({suffix: ".min"}))
         .pipe(uglify())
-        .pipe(dest('dist/js'));
+        .pipe(dest("dist/js"));
 }
 
 function watchTask()
