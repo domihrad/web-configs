@@ -5,5 +5,28 @@ deny from all
 
 Options -Indexes
 
+ErrorDocument 401 Error
 ErrorDocument 403 Error
 ErrorDocument 404 Error
+ErrorDocument 503 Error
+
+
+#RedirectMatch 301 ^/app/ Error
+#
+#RewriteEngine On
+#
+#RewriteCond %{HTTP:X-Forwarded-Proto} !hsttps
+#RewriteCond %{HTTPS} off
+#RewriteCond %{HTTP:CF-Visitor} !{"scheme":"https"}
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#
+#RewriteCond %{QUERY_STRING} ^(.*)i=[^&]+(.*)$ [NC]
+#RewriteRule ^(.*)$ /$1?%1%2 [R=301,L]
+#
+#RewriteBase /www
+#RewriteCond %{SCRIPT_FILENAME} !-f
+#RewriteRule !^www(/?|/.+)$ /www%{REQUEST_URI} [L]
+#
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule (.*) /index.php/$1 [L]

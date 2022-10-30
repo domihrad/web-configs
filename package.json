@@ -1,15 +1,15 @@
 {
-  "name": "web-config",
-  "version": "1.0.0",
-  "description": "php",
-  "main": "gulpfile.js",
-  "scripts": {
+    "name": "web-configs",
+    "version": "1.0.0",
+    "description": "scrapper",
+    "main": "gulpfile.js",
+    "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
       "autoprefixer": "^10.4.8",
       "browser-sync": "^2.27.10",
       "concat": "^1.0.3",
@@ -23,12 +23,14 @@
       "gulp-rename": "^2.0.0",
       "latest-version": "^7.0.0",
       "uglify": "^0.1.5"
-  },
-  "devDependencies": {
+    },
+    "devDependencies": {
       "gulp-concat": "^2.6.1",
+      "gulp-imagemin": "^7.1.0",
       "gulp-sass": "^5.1.0",
+      "gulp-terser": "^2.1.0",
       "gulp-uglify": "^3.0.2",
       "gulp-util": "^3.0.8",
       "sass": "^1.54.2"
+    }
   }
-}
