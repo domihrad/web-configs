@@ -12,11 +12,11 @@ var { src, dest, watch, series } = require("gulp"),
 const scss = () =>
 {
     return src("src/styles/scss/*.scss")
-    .pipe(sass())
-    .pipe(autoprefixer("last 2 version"))
-    .pipe(concat("main.css"))
-    .pipe(rename({suffix: ".min"}))
-    .pipe(dest("src/styles"));
+        .pipe(sass())
+        .pipe(autoprefixer("last 2 version"))
+        .pipe(concat("main.css"))
+        .pipe(rename({suffix: ".min"}))
+        .pipe(dest("src/styles"));
 }
 const styles = () =>
 {
